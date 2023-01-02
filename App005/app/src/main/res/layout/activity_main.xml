@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/my_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFCD31"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="내 단어장"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFCD31"
+        android:text="단어추가"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_word"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

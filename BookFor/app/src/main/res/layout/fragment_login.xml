@@ -11,38 +11,53 @@
     <TextView
         android:layout_width="25sp"
         android:layout_height="150dp"
-        android:background="#A480D2" />
+        android:background="#A480D2"
+
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="80sp"
-        android:text="Book\nFor" />
+        android:text="Book\nFor"
+        />
 
     <TextView
+        android:id="@+id/email_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="이메일"
+        app:layout_constraintBottom_toTopOf="@+id/email_input"
             />
 
     <EditText
+        android:id="@+id/email_input"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/pw_label"
+        />
 
     <TextView
+        android:id="@+id/pw_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="비밀번호"
+        app:layout_constraintBottom_toTopOf="@+id/pw_input"
         />
 
     <EditText
+        android:id="@+id/pw_input"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        />
 
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="로그인하기"
+        app:layout_constraintBottom_toTopOf="@+id/find_password"
         />
 
     <Button

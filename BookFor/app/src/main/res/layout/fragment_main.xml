@@ -1,19 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <TextView
-        android:layout_width="15dp"
-        android:layout_height="90dp"
-        android:background="#A480D2"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left_38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="38sp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top_34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="34sp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_right_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="25sp"
+        />
 
+    <TextView
+        android:layout_width="18dp"
+        android:layout_height="100dp"
+        android:background="#A480D2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30sp"
         />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/my_lib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guide_left_38"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="34sp"
+        android:textSize="30dp"
+        android:text="내 서재" />
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_baseline_search_24"
+        app:layout_constraintBaseline_toBaselineOf="@+id/my_lib"
+        app:layout_constraintRight_toLeftOf="@+id/btn_menu"
+       />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btn_menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_baseline_menu_24"
+        app:layout_constraintBaseline_toBaselineOf="@+id/my_lib"
+        app:layout_constraintRight_toRightOf="@id/guide_right_25"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

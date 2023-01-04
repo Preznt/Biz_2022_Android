@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <!--
+    data binding 을 수행하기 위하여 전체 화면을 layout 으로 감싼다
+    -->
+
+    <!-- data tag를 설정하여 data binding 을 수행한다 -->
+    <data>
+        <variable
+            name="wordViewModel"
+            type="com.bjw.game.models.WordViewModel" />
+    </data>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,13 +19,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/default_padding"
-    tools:context=".MainFragment">
+    tools:context=".ui.MainFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
-        android:text="Korea"
+        android:text="@{wordViewModel.currentWord}"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/txt_title"
@@ -26,7 +38,7 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="주어진 알파벳으로 단어를 맞춰주세요"
+        android:text="@string/correct_chk_word"
         app:layout_constraintBottom_toTopOf="@+id/layout_input_word"
         />
 
@@ -34,7 +46,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_input_word"
         style="@style/Bjw.TextInputLayout.OutLineBox"
-        android:hint="단어를 입력하세요"
+        android:hint="@string/input_word"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_title"
         app:layout_constraintEnd_toEndOf="parent">
@@ -53,7 +65,7 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="건너뛰기"
+        android:text="@string/skip"
         android:layout_marginStart="@dimen/default_padding"
         android:layout_marginEnd="@dimen/default_padding"
 
@@ -66,7 +78,7 @@
         android:id="@+id/btn_submit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="확인"
+        android:text="@string/submit"
         android:layout_marginTop="@dimen/default_margin"
 
         app:layout_constraintTop_toBottomOf="@+id/layout_input_word"
@@ -74,3 +86,4 @@
         app:layout_constraintStart_toEndOf="@+id/btn_skip"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

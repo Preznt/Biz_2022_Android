@@ -37,6 +37,7 @@ android {
     // 안드로이드 스튜디오 4.0 아상에서
     buildFeatures {
         viewBinding true
+        // viewModel 과 view(UI) 화면을 연동하기
         dataBinding true
     }
     // Android Student 3.x - 4.0 까지 사용가능
@@ -64,6 +65,19 @@ dependencies {
     // Constraint Layout 을 사용하기 위한 lib
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     
+    // 두개의 버전 맞춰주기, -ktx 는 코틀린 전용으로 쓰겠다는 것
+    def lifecycle_version = "2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    // Fragment 에서 viewModel 데이터를 사용하기위한 lib
+    implementation 'androidx.fragment:fragment-ktx:1.5.5'
+
+    // databinding 효과를 사용하기 위한 lib
+    implementation 'androidx.databinding:databinding-runtime:7.3.1'
+
+
+
     // 단위테이스를 수행하는 도구
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'

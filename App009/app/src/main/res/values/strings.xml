@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Scramble Word</string>
+    <string name="input_word">Pleas Input Word</string>
+    <string name="skip">skip</string>
+    <string name="submit">submit</string>
+    <string name="correct_chk_word">Please Guess the word with the given alphabet</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

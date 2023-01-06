@@ -6,7 +6,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment">
+    tools:context=".ui.MainFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_left_38"
@@ -57,12 +57,70 @@
         android:id="@+id/btn_menu"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/ic_baseline_menu_24"
+        android:background="@drawable/menu"
         app:layout_constraintBaseline_toBaselineOf="@+id/my_lib"
         app:layout_constraintRight_toRightOf="@id/guide_right_25"
         />
+<!--    카테고리-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/my_lib"
+        app:layout_constraintLeft_toLeftOf="@+id/guide_left_38"
+        android:layout_marginTop="15dp"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:layout_marginRight="15dp"
+            android:text="전체"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:layout_marginRight="15dp"
+            android:text="읽는"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:layout_marginRight="15dp"
+            android:text="읽음"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:text="읽을"
+            />
+    </LinearLayout>
 
+<!--BottomNavigation-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/main_menu_bottom"
+        app:itemIconSize="40sp"
+        />
+<!--floatingButton-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_float_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/main_purple"
+        android:src="@drawable/ic_baseline_add_24"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bar"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

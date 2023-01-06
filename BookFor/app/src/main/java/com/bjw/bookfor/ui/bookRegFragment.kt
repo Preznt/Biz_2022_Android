@@ -1,13 +1,13 @@
-package com.bjw.bookfor
+package com.bjw.bookfor.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bjw.bookfor.R
 
-
-class CollectionFragment : Fragment() {
+class bookRegFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,7 @@ class CollectionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_collection, container, false)
+        return inflater.inflate(R.layout.fragment_book_reg, container, false)
     }
 
 }

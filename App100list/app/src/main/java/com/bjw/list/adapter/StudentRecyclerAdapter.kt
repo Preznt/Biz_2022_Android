@@ -41,8 +41,12 @@ class StudentRecyclerAdapter(private val studentList: MutableList<StudentDto>) :
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+
+        // List 에서 1개의 데이터를 추출하여
+        // position -> 각각의 요소가 위치해 있는 위치
         val item = studentList[position]
         val stHolder = holder as StudentViewHolder
+        // 개별 데이터를 view 의 text 속성에 setting 하기
         stHolder.txtStName.text = item.name.toString()
         stHolder.txtStNum.text = item.num.toString()
         stHolder.txtStAddr.text = item.address.toString()
@@ -61,7 +65,10 @@ class StudentRecyclerAdapter(private val studentList: MutableList<StudentDto>) :
      * layout/student_list_item.xml 파일을 binding 객체로 생성하는 코드
      */
     inner class StudentViewHolder(binding: StudentListItemBinding) :
+
         RecyclerView.ViewHolder(binding.root) {
+
+        // xml 파일의 view 요소들을 각각 개별 변수에 할당
         val txtStNum: TextView = binding.stNum
         val txtStName: TextView = binding.stName
         val txtStAddr: TextView = binding.stAddr

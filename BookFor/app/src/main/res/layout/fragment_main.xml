@@ -45,22 +45,25 @@
         android:layout_marginTop="34sp"
         android:textSize="30dp"
         android:text="내 서재" />
+
     <Button
+        android:id="@+id/btn_search"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/ic_baseline_search_24"
         app:layout_constraintBaseline_toBaselineOf="@+id/my_lib"
-        app:layout_constraintRight_toLeftOf="@+id/btn_menu"
+        app:layout_constraintRight_toRightOf="@+id/guide_right_25"
        />
 
-    <Button
-        android:id="@+id/btn_menu"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/menu"
-        app:layout_constraintBaseline_toBaselineOf="@+id/my_lib"
-        app:layout_constraintRight_toRightOf="@id/guide_right_25"
-        />
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_menu"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:background="@drawable/menu"-->
+<!--        app:layout_constraintBaseline_toBaselineOf="@+id/my_lib"-->
+<!--        app:layout_constraintRight_toRightOf="@id/guide_right_25"-->
+<!--        />-->
 <!--    카테고리-->
     <LinearLayout
         android:layout_width="wrap_content"
@@ -110,9 +113,30 @@
         app:itemIconSize="40sp"
         />
 <!--floatingButton-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FC89B5"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bar"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_float_add"
+        android:id="@+id/fab_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FC89B5"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bar"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_float_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/main_purple"
